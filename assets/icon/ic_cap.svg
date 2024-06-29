@@ -1,0 +1,30 @@
+<svg width="126" height="132" viewBox="0 0 126 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<ellipse cx="63" cy="113.5" rx="63" ry="18.5" fill="url(#paint0_radial_7052_35031)" fill-opacity="0.4"/>
+<ellipse cx="63" cy="113.5" rx="63" ry="18.5" fill="#97B5D5" fill-opacity="0.39" style="mix-blend-mode:overlay"/>
+</g>
+<path d="M34.6194 101.829L25.3281 28.4028C34.6194 37.9252 89.439 38.3581 98.9102 28.4028L89.439 101.829C86.499 103.144 76.6839 105.774 60.9436 105.774C45.2034 105.774 36.8357 103.144 34.6194 101.829Z" fill="#1248DE" fill-opacity="0.16" stroke="#8F9BBF" stroke-opacity="0.16" stroke-width="3"/>
+<ellipse cx="62.7477" cy="7.66581" rx="41.4499" ry="5.66581" stroke="#96A2B3" stroke-width="3"/>
+<ellipse cx="62.9848" cy="28.4027" rx="37.6567" ry="5.62687" fill="#EDEFF5"/>
+<ellipse cx="62.9847" cy="28.8357" rx="31.597" ry="4.32836" fill="#C1CEF1"/>
+<path opacity="0.2" d="M86 98C86 96.8954 75.2548 96 62 96C48.7452 96 38 96.8954 38 98" stroke="#96A2B3" stroke-width="3"/>
+<path d="M92.5679 112.334C92.5679 115.463 79.0168 118 62.3006 118C45.5844 118 32.0332 115.463 32.0332 112.334" stroke="#96A2B3" stroke-width="3"/>
+<path d="M32.0334 113.229L21 8.70947C27.1131 10.2005 44.5578 13.1825 65.4319 13.1825C86.3059 13.1825 99.7746 10.2005 103.9 8.70947L92.2699 113.229C89.0394 114.819 78.2545 118 60.9589 118C43.6632 118 34.4687 114.819 32.0334 113.229Z" stroke="#96A2B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.8945 9.75342L34.6195 101.829C36.8358 103.144 45.2035 105.774 60.9438 105.774C76.6841 105.774 86.4991 103.144 89.4391 101.829L103.452 9.75342" stroke="#96A2B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M88.6918 111.439L89.2882 105.625C84.9146 106.569 73.9137 108.905 64.8359 108.905C54.1006 108.905 56.2293 114.798 59.4682 115.316C63.1956 115.912 79.0003 115.316 88.6918 111.439Z" fill="#96A2B3"/>
+<circle opacity="0.5" cx="56.5" cy="68.5" r="4.5" fill="white"/>
+<circle opacity="0.5" cx="72.5" cy="60.5" r="2.5" fill="white"/>
+<circle opacity="0.5" cx="62.5" cy="25.5" r="2.5" fill="white"/>
+<circle opacity="0.5" cx="93.5" cy="36.5" r="2.5" fill="white"/>
+<circle opacity="0.5" cx="32.5" cy="41.5" r="2.5" fill="white"/>
+<circle opacity="0.5" cx="64.5" cy="93.5" r="2.5" fill="white"/>
+<circle opacity="0.5" cx="68.5" cy="47.5" r="2.5" fill="white"/>
+<defs>
+<radialGradient id="paint0_radial_7052_35031" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(63 113.5) scale(63 13)">
+<stop stop-color="white"/>
+<stop offset="0.475" stop-color="#A6A6A6"/>
+<stop offset="0.82" stop-color="#737373"/>
+<stop offset="0.99" stop-color="#737373" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
