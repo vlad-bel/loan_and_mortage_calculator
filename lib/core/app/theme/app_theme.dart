@@ -13,6 +13,7 @@ final lightAppColors = AppColorsExtension(
   textPrimary: AppColors.black,
   textSecondary: AppColors.grey2,
   textField: AppColors.grey3,
+  error: AppColors.red,
 );
 
 class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
@@ -22,6 +23,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
     required this.textPrimary,
     required this.textSecondary,
     required this.textField,
+    required this.error,
   });
 
   final Color appBackground;
@@ -29,6 +31,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
   final Color textPrimary;
   final Color textSecondary;
   final Color textField;
+  final Color error;
 
   @override
   ThemeExtension<AppColorsExtension> copyWith({
@@ -37,6 +40,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
     Color? textPrimary,
     Color? textSecondary,
     Color? textField,
+    Color? error,
   }) {
     return AppColorsExtension(
       appBackground: appBackground ?? this.appBackground,
@@ -44,6 +48,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       textPrimary: textPrimary ?? this.textPrimary,
       textSecondary: textSecondary ?? this.textSecondary,
       textField: textField ?? this.textField,
+      error: error ?? this.error,
     );
   }
 
@@ -62,13 +67,13 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       textPrimary: Color.lerp(textPrimary, other.textPrimary, t)!,
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
       textField: Color.lerp(textField, other.textField, t)!,
+      error: Color.lerp(error, other.error, t)!,
     );
   }
 }
 
 extension AppThemeExtension on ThemeData {
-  AppColorsExtension get appColors =>
-      extension<AppColorsExtension>() ?? lightAppColors;
+  AppColorsExtension get appColors => extension<AppColorsExtension>() ?? lightAppColors;
 }
 
 extension ThemeGetter on BuildContext {
