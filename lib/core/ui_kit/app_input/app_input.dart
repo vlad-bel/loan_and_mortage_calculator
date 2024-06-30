@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:loan_and_mortgage_calculator/core/app/theme/app_styles.dart';
 import 'package:loan_and_mortgage_calculator/core/app/theme/app_theme.dart';
@@ -15,7 +16,7 @@ class AppInput extends StatefulWidget with InputValidationMixin {
   final String? hintText;
   final String? suffixText;
   final TextInputType inputType;
-  final TextStyle textStyle;
+  final TextStyle? textStyle;
   final TextStyle? hintStyle;
   final Color? backgroundColor;
   final TextEditingController controller;
@@ -27,7 +28,7 @@ class AppInput extends StatefulWidget with InputValidationMixin {
   final Function(String)? onChanged;
   final Function()? onTap;
   final Function(String text)? onFieldSubmitted;
-  final List<TextInputFormatter> formatters;
+  final List<TextInputFormatter>? formatters;
   final String? errorString;
   final List<MHFInputValidatorModel> validators;
   final FocusNode? focusNode;
@@ -45,11 +46,7 @@ class AppInput extends StatefulWidget with InputValidationMixin {
     super.key,
     this.prefix = const SizedBox(),
     this.inputType = TextInputType.text,
-    this.textStyle = const TextStyle(
-      color: Colors.black,
-      fontSize: 16,
-      fontWeight: FontWeight.w600,
-    ),
+    this.textStyle,
     this.backgroundColor,
     required this.controller,
     this.height = kDefaultHeight,
@@ -59,7 +56,7 @@ class AppInput extends StatefulWidget with InputValidationMixin {
     this.readOnly = false,
     this.onFocus,
     this.suffixWidget = const SizedBox(),
-    this.formatters = const [],
+    this.formatters,
     this.errorString,
     this.validators = const [],
     this.focusNode,
@@ -97,7 +94,9 @@ class _AppInputState extends State<AppInput> {
     return BoxDecoration(
         color: widget.backgroundColor,
         borderRadius: BorderRadius.all(Radius.circular(widget.borderRadius ?? AppValues.kDefaultBorderRadius)),
-        border: _errorString != null ? Border.all(color: context.theme.appColors.appBackground) : widget.border);
+        border: _errorString != null
+            ? Border.all(color: context.theme.appColors.appBackground)
+            : Border.all(color: context.theme.appColors.primary, width: 1));
   }
 
   Widget _suffix() {
@@ -134,11 +133,12 @@ class _AppInputState extends State<AppInput> {
         onChanged: widget.onChanged,
         autofocus: widget.autoFocus,
         cursorColor: context.theme.appColors.textPrimary,
-        style: widget.textStyle,
+        style: widget.textStyle?.copyWith(fontSize: 12.sp),
+
         decoration: InputDecoration(
           suffixIcon: Text(widget.suffixText ?? '', style: widget.hintStyle),
           suffixIconConstraints: const BoxConstraints(minWidth: 0, minHeight: 0),
-          hintStyle: widget.hintStyle,
+          hintStyle: AppStyles.body,
           hintText: widget.hintText,
           errorStyle: const TextStyle(height: 0, fontSize: 0),
           isDense: true,
@@ -178,7 +178,7 @@ class _AppInputState extends State<AppInput> {
       },
       child: Container(
         padding: widget.padding,
-        height: widget.height,
+        // height: widget.height!.h,
         decoration: _boxDecoration(),
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -216,7 +216,7 @@ class _AppInputState extends State<AppInput> {
       mainAxisSize: MainAxisSize.max,
       children: [
         if (widget.title != null) Text(widget.title!, style: AppStyles.titleS),
-        if (widget.title != null) const SizedBox(height: AppValues.kSmallMargin),
+        if (widget.title != null) SizedBox(height: AppValues.kSmallMarginX2),
         SizedBox(
           width: size.width,
           child: _body(),
