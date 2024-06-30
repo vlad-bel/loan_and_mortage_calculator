@@ -20,13 +20,6 @@ class CalculationModel extends HiveObject {
   @HiveField(5)
   final List<CalculationDetailsModel> details;
 
-  // double? annuityResult,
-  //     required int sumOfCredit,
-  //     required double totalPayment,
-  //     required double interesedPercentage,
-  //     required CalculateType calculateType,
-  //     required List<CalculationDetailsEntity> details,
-
   CalculationModel({
     required this.annuityResult,
     required this.sumOfCredit,

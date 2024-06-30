@@ -6,7 +6,7 @@ import 'package:loan_and_mortgage_calculator/core/app/di/injection.dart';
 import 'package:loan_and_mortgage_calculator/core/app/theme/app_styles.dart';
 import 'package:loan_and_mortgage_calculator/core/app/theme/app_theme.dart';
 import 'package:loan_and_mortgage_calculator/core/app/theme/app_values.dart';
-import 'package:loan_and_mortgage_calculator/core/ui_kit/app_input/app_bottomsheet.dart';
+import 'package:loan_and_mortgage_calculator/core/ui_kit/modal/app_bottomsheet.dart';
 import 'package:loan_and_mortgage_calculator/core/util/money_formatter.dart';
 import 'package:loan_and_mortgage_calculator/feature/loan_and_mortgage_calculator/domain/entity/calculate_type.dart';
 import 'package:loan_and_mortgage_calculator/feature/loan_and_mortgage_calculator/presentation/calculator_details_bottomsheet/calculator_details_bottomsheet.dart';
@@ -100,9 +100,7 @@ class _HistoryPageState extends State<HistoryPage> {
                                       ),
                                       Text(
                                         "Тип: ${switch (state.calculationList[i].calculateType) {
-                                          // TODO: Handle this case.
                                           CalculateType.annuity => "Аннуитетный",
-                                          // TODO: Handle this case.
                                           CalculateType.differentiated => "Дифференцированный",
                                         }}",
                                         style: AppStyles.body.copyWith(

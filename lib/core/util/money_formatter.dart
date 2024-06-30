@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 class MoneyFormatter extends TextInputFormatter {
-  static final NumberFormat _formatter = NumberFormat('#,###,###', 'ru_RU');
+  static final _formatter = NumberFormat('#,###,###', 'ru_RU');
 
   @override
   TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
@@ -24,10 +24,6 @@ class MoneyFormatter extends TextInputFormatter {
     }
 
     String formattedText = getFormattedValue(value);
-
-    // int newCursorPosition = newText.length == newValue.selection.end
-    //     ? formattedText.length
-    //     : newValue.selection.end + formattedText.length - newText.length;
 
     return TextEditingValue(
       text: formattedText,
