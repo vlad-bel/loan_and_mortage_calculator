@@ -38,6 +38,7 @@ class CalculatorDbRepository implements CalculatorRepository {
             .toList(),
         totalPayment: calculation.totalPayment,
       );
+
       await dataSource.addCalculation(
         calculation: model,
       );
@@ -51,6 +52,7 @@ class CalculatorDbRepository implements CalculatorRepository {
   Future<Either<String, List<CalculationEntity>>> getCalculations() async {
     try {
       final calculations = await dataSource.getCalculations();
+
       final calculationsEntites = calculations
           .map((model) => CalculationEntity(
                 sumOfCredit: model.sumOfCredit,
