@@ -1,0 +1,6 @@
+enum CalculateType{
+  annuity,
+  differentiated,
+
+
+}

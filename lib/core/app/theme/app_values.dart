@@ -20,5 +20,5 @@ class AppValues {
   ///48
   static const double kPageMarginX3 = 48.0;
 
-  static const double kDefaultBorderRadius = 12;
+  static const double kDefaultBorderRadius = 16;
 }

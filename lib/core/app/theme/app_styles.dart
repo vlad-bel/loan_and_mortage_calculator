@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppStyles {
   static const TextStyle titleL = TextStyle(
@@ -27,8 +28,8 @@ class AppStyles {
     fontWeight: FontWeight.w600,
   );
 
-  static const TextStyle buttons = TextStyle(
-    fontSize: 18,
+  static  TextStyle buttons = TextStyle(
+    fontSize: 18.sp,
     fontWeight: FontWeight.w600,
   );
 

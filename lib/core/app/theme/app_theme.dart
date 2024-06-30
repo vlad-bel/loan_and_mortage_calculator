@@ -14,6 +14,7 @@ final lightAppColors = AppColorsExtension(
   textSecondary: AppColors.grey2,
   textField: AppColors.grey3,
   error: AppColors.red,
+  primary: AppColors.green,
 );
 
 class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
@@ -24,10 +25,12 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
     required this.textSecondary,
     required this.textField,
     required this.error,
+    required this.primary,
   });
 
   final Color appBackground;
   final Color widgetBackground;
+  final Color primary;
   final Color textPrimary;
   final Color textSecondary;
   final Color textField;
@@ -41,6 +44,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
     Color? textSecondary,
     Color? textField,
     Color? error,
+    Color? primary,
   }) {
     return AppColorsExtension(
       appBackground: appBackground ?? this.appBackground,
@@ -49,6 +53,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       textSecondary: textSecondary ?? this.textSecondary,
       textField: textField ?? this.textField,
       error: error ?? this.error,
+      primary: primary ?? this.primary,
     );
   }
 
@@ -68,6 +73,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
       textField: Color.lerp(textField, other.textField, t)!,
       error: Color.lerp(error, other.error, t)!,
+      primary: Color.lerp(primary, other.primary, t)!,
     );
   }
 }
